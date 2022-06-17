@@ -478,8 +478,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-height: 581px;
-  min-width: 528px;
+  height: 581px;
+  width: 528px;
   padding: 40px;
 
   background-color: var(--primary-white-color);
@@ -535,6 +535,10 @@ img {
 
 .form-field label {
   color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
 
 .form-field label:not(:last-child) {
@@ -551,6 +555,7 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
 
   transition: border-color var(--timing-function) var(--cubic),
     box-shadow var(--timing-function) var(--cubic);
@@ -581,6 +586,7 @@ textarea:hover {
 }
 
 textarea {
+  display: block;
   resize: none;
   width: 100%;
   height: 120px;
@@ -589,6 +595,7 @@ textarea {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
 
   transition: border-color var(--timing-function) var(--cubic),
     box-shadow var(--timing-function) var(--cubic);
@@ -628,15 +635,15 @@ textarea:placeholder-shown {
 .check-icon {
   fill: transparent;
 }
-
-.modal-check:checked + .check-text span,
-.modal-check:focus + .check-text span {
+.modal-check:focus + .check-text span,
+.modal-check:hover + .check-text span {
+  border-color: var(--accent-text-color);
+}
+.modal-check:checked + .check-text span {
   background-color: var(--accent-text-color);
   border: none;
 }
-
-.modal-check:checked + .check-text .check-icon,
-.modal-check:focus + .check-text .check-icon {
+.modal-check:checked + .check-text .check-icon {
   fill: var(--primary-white-color);
 }
 
